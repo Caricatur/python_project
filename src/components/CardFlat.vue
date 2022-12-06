@@ -2,16 +2,17 @@
 </script>
 
 <template>
-  <div class="map">
-    <h1 class="test">Map</h1>
+  <div class="card_flat">
+    <h1 class="test">Flat card text</h1>
   </div>
 </template>
 
 <style scoped>
-.map {
-    background-color: #ffd670;
-    grid-area: map;
-    padding: 0;
+.card_flat {
+    background-color:teal;
+    grid-area: filter;
+    height: 10rem;
+    margin: 1rem;
     display: flex;
     justify-content: center;
     align-content: center;
@@ -20,12 +21,6 @@
 .test {
     text-align: center;
     color: white;
-}
-
-@media screen and (max-width:420px) {
-    .map {
-        display: none;
-    }
 }
 
 </style>

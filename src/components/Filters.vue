@@ -2,15 +2,15 @@
 </script>
 
 <template>
-  <div class="map">
-    <h1 class="test">Map</h1>
+  <div class="filter_block">
+    <h1 class="test">Filters</h1>
   </div>
 </template>
 
 <style scoped>
-.map {
-    background-color: #ffd670;
-    grid-area: map;
+.filter_block {
+    background-color: rgb(158, 255, 158);
+    grid-area: filters;
     padding: 0;
     display: flex;
     justify-content: center;
@@ -20,12 +20,6 @@
 .test {
     text-align: center;
     color: white;
-}
-
-@media screen and (max-width:420px) {
-    .map {
-        display: none;
-    }
 }
 
 </style>

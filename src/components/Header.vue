@@ -3,7 +3,7 @@
 
 <template>
   <div class="header">
-    <h1 class="test">header</h1>
+    <h1 class="test">Header</h1>
     </div>
 </template>
 

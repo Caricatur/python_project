@@ -1,21 +1,22 @@
 <script setup>
+import CardFlat from './CardFlat.vue';
 </script>
 
 <template>
-  <div class="filter_block">
-    <h1 class="test">filters</h1>
+  <div class="flat_list">
+    <CardFlat />
+    <CardFlat />
+    <CardFlat />
   </div>
 </template>
 
 <style scoped>
-.filter_block {
+.data_block {
     background-color:#FE5F55;
     grid-area: filter;
     padding: 0;
-    display: flex;
-    justify-content: center;
-    align-content: center;
-    flex-direction: column;
+    display: grid;
+    grid-gap: 1rem;
 }
 .test {
     text-align: center;

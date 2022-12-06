@@ -1,12 +1,12 @@
 <script setup>
 import Header from "../components/Header.vue"
-import Filter from "../components/Filter.vue"
+import DataBlock   from "./DataBlock.vue"
 import Map from "../components/Map.vue"
 </script>
 
 <template>
   <Header />
-  <Filter />
+  <DataBlock />
   <Map />
 </template>
 

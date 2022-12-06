@@ -16,11 +16,9 @@ import HelloWorld from "./components/HelloWorld.vue";
   display: grid;
   grid-template-areas: 
     "header header header"
-    "filter map map"
-    "footer footer footer";
+    "data map map";
   grid-template-rows: 7rem 1fr;
   grid-template-columns: 50% 50%;  
-  height: 100vh;
   margin: 0;
   padding: 3px;
 }
@@ -29,7 +27,7 @@ import HelloWorld from "./components/HelloWorld.vue";
     .wrapper {
       grid-template-areas: 
     "header header header"
-    "filter filter filter"
+    "data data data"
     "footer footer footer";
     }
 }
