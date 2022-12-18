@@ -10,6 +10,9 @@
     "lint": "eslint . --ext .vue,.js,.jsx,.cjs,.mjs --fix --ignore-path .gitignore"
   },
   "dependencies": {
+    "leaflet": "^1.9.3",
+    "mapbox-gl": "^2.11.1",
+    "mapbox-gl-vue": "^2.0.4",
     "vue": "^3.2.45",
     "vue-router": "^4.1.6"
   },

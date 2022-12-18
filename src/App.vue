@@ -15,10 +15,8 @@ import HelloWorld from "./components/HelloWorld.vue";
 .wrapper {
   display: grid;
   grid-template-areas: 
-    "header header header"
-    "data map map";
-  grid-template-rows: 7rem 1fr;
-  grid-template-columns: 50% 50%;  
+    "map map map";
+  grid-template-rows: 100vh;
   margin: 0;
   padding: 3px;
 }

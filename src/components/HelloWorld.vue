@@ -1,12 +1,10 @@
 <script setup>
-import Header from "../components/Header.vue"
-import DataBlock   from "./DataBlock.vue"
 import Map from "../components/Map.vue"
+import MapFeatures from "./MapFeatures.vue";
 </script>
 
 <template>
-  <Header />
-  <DataBlock />
+  <MapFeatures />
   <Map />
 </template>
 

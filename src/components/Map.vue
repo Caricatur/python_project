@@ -1,9 +1,6 @@
-<script setup>
-</script>
-
 <template>
   <div class="map">
-    <h1 class="test">Map</h1>
+    <div id="map" class="h-full z-[1]"></div>
   </div>
 </template>
 
@@ -12,11 +9,13 @@
     background-color: #ffd670;
     grid-area: map;
     padding: 0;
-    display: flex;
-    justify-content: center;
-    align-content: center;
-    flex-direction: column;
+    z-index: 1;
 }
+
+#map { 
+  height: 100%; 
+}
+
 .test {
     text-align: center;
     color: white;
@@ -29,3 +28,31 @@
 }
 
 </style>
+
+<script>
+import leaflet from "leaflet"
+import { onMounted } from "vue";
+export default {
+  name: "Map",
+  components: {},
+  setup() {
+    let map;
+    onMounted(() => {
+      map = leaflet.map('map').setView([55.751244, 37.618423], 12);
+      leaflet
+        .tileLayer(
+          `https://api.mapbox.com/styles/v1/{id}/tiles/{z}/{x}/{y}?access_token=pk.eyJ1IjoiYW50eWF0cyIsImEiOiJjbGJ0aXBrZjExN2owM3dzM2d0bHJ1NWdrIn0.tU-T3OQH31H4s4dE_BL5lQ`,
+          {
+            maxZoom: 18,
+            id: "mapbox/streets-v11", 
+            style: "mapbox://styles/antyats/clbtj28pc004s14o9vpuncr4r",
+            tileSize: 512,
+            zoomOffset: -1,
+            accessToken: "pk.eyJ1IjoiYW50eWF0cyIsImEiOiJjbGJ0aXBrZjExN2owM3dzM2d0bHJ1NWdrIn0.tU-T3OQH31H4s4dE_BL5lQ",
+          }
+        )
+        .addTo(map);
+    })
+  }
+}
+</script>
