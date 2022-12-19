@@ -32499,7 +32499,7 @@ export default {
     }
   },
     mounted() {
-      map = leaflet.map('map').setView([55.751244, 37.618423], 12);
+    let map = leaflet.map('map').setView([55.751244, 37.618423], 12);
       leaflet
         .tileLayer(
           `https://api.mapbox.com/styles/v1/{id}/tiles/{z}/{x}/{y}?access_token=pk.eyJ1IjoiYW50eWF0cyIsImEiOiJjbGJ0aXBrZjExN2owM3dzM2d0bHJ1NWdrIn0.tU-T3OQH31H4s4dE_BL5lQ`,
