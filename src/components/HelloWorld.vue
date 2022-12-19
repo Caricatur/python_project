@@ -1,10 +1,8 @@
 <script setup>
 import Map from "../components/Map.vue"
-import MapFeatures from "./MapFeatures.vue";
 </script>
 
 <template>
-  <MapFeatures />
   <Map />
 </template>
 

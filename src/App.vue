@@ -11,7 +11,11 @@ import HelloWorld from "./components/HelloWorld.vue";
   </header>
 </template>
 
-<style scoped>
+<style>
+@import url('https://fonts.googleapis.com/css2?family=BIZ+UDPGothic&display=swap');
+body {
+  font-family: 'BIZ UDPGothic', sans-serif;
+}
 .wrapper {
   display: grid;
   grid-template-areas: 
