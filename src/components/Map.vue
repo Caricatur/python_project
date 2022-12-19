@@ -2,12 +2,12 @@
   <div class="map"> 
     <div class="map_features">
         <div id="search" class="search">
-        <button id="search_button" class="button" @click="find">Найти!</button>
-        <input class="input_base" type="search" v-model = "place" placeholder="Выберите место">
+          <button id="search_button" class="button" @click="find">Найти!</button>
+          <input class="input_base" type="search" v-model = "place" placeholder="Выберите место">
         </div>    
     </div>    
     <div id ="info" class="info_base"></div>
-    <div id = "map"></div>
+    <div id="map"></div>
   </div>
 </template>
 
@@ -170,7 +170,6 @@ img.huechange2 { background-color: red; }
 
 .calc {
   /*font-family: Times New Roman;.*/
-  top: -16rem;
   display: grid;
   width: 41rem;
   height: 17rem;
@@ -272,9 +271,34 @@ export default {
     }
   },
   methods: {
-    find() {
-      console.log("here");
-    }
+    Answer: function (message, picked) {
+      if (picked == "Choice1") {
+        var p = 5.7;
+      }
+      if (picked == "Choice2") {
+        var p = 6.7;
+      }
+      if (picked == "Choice3") {
+        var p = 4.7;
+      }
+      if (picked == "Choice4") {
+        var p = 11.5;
+      }
+      if (picked == "Choice1_") {
+        var p = 5.8;
+      }
+      if (picked == "Choice2_") {
+        var p = 10.7;
+      }
+      if (picked == "Choice3_") {
+        var p = 11.8;
+      }
+      var r  = 10000; /* цена квартиры */
+      var s = message[0]; /* первоначальный взнос */
+      var m = message[1]; /* количесво лет */
+      var x = ((r - s) / 12*m) + p*0.01*(r - s)
+      return x
+    },
   },
   setup() {
     let map;
@@ -32526,73 +32550,12 @@ export default {
       <div class="image exmp3">
         <img src="${flat.photos}">
       </div>
-<!--      <div style="clear: both;">   </div>-->
       <div class="info"> <ul>
         <li class="cost"><b>${flat.price} руб. </b></li>
         <li class="type"><b>Метро: ${flat.available_metro_station[0]}</b></li>
         <li class="type"><b>Адрес: ${flat.address} </b></li>
         <li class="type">${flat.total_information}</li>
       </ul>
-      </div>
-      <div class="calc">
-        <h3 class="calc_text">Калькулятор ипотеки</h3>
-        <form>
-          <div>
-            <label class="calc_text">Первоначальный взнос: </label>
-            <input class="input" type="number" id="first payment" min="1">
-          </div>
-          <div>
-            <label class="calc_text">Сколько лет: </label>
-            <input class="input" type="number" id="year" min="1" max="30">
-          </div>
-
-          <!--Кнопочки для банков -->
-          <div>
-            <p class="calc_text">ВТБ банк:</p>
-            <div>
-              <input type="radio" class="radio" id="Choice1"
-              name="1" value="1">
-              <label for="Choice1" class="calc_text"> Для семей с детьми </label>
-
-              <input type="radio" class="radio" id="Choice2"
-              name="2" value="2">
-              <label for="Choice2" class="calc_text"> С госсподержкой </label>
-
-              <input type="radio" class="radio" id="Choice3"
-              name="3" value="3">
-              <label for="Choice3" class="calc_text"> Для IT-специалистов </label>
-
-              <input type="radio" class="radio" id="Choice4"
-              name="4" value="4">
-              <label for="Choice4" class="calc_text"> Обычная ставка </label><br>
-            </div>
-            <p class="calc_text">Альфа банк:</p>
-            <div>
-              <input type="radio"  class="radio" id="Choice1_"
-              name="1" value="1">
-              <label for="Choice1" class="calc_text"> Для семей с детьми </label>
-
-              <input type="radio" class="radio" id="Choice2_"
-              name="2" value="2">
-              <label for="Choice2" class="calc_text"> 'Под залог' </label>
-
-              <input type="radio" class="radio" id="Choice3_"
-              name="3" value="3">
-              <label for="Choice3" class="calc_text"> Обычная ставка </label>
-            </div>
-
-      <!-- кнопка всплывающего окошка-->
-<!--            <button id="myBtn">Open Modal</button>-->
-
-<!--              <div id="myModal" class="modal">-->
-<!--                <div class="modal-content">-->
-<!--                  <span class="close">&times;</span>-->
-<!--                  <p>Some text in the Modal..</p>-->
-<!--                </div>-->
-<!--              </div>-->
-          </div>>
-        </form>
-
       </div>
     </div>`;
               info.style.display = "block";
